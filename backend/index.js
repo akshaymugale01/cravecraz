@@ -83,7 +83,7 @@ const axios = require('axios');
 
 // CORS middleware
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000/");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
@@ -101,7 +101,7 @@ app.use(express.json());
 // Proxy requests to the API
 app.get('/api/foodData', async (req, res) => {
     try {
-        const response = await axios.get('https://cravecrazee.onrender.com/api/foodData');
+        const response = await axios.get('http://localhost:5000/api/foodData');
         res.json(response.data);
     } catch (error) {
         console.error('Error:', error);
