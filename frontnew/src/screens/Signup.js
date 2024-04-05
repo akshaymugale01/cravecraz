@@ -10,7 +10,7 @@ export default function Signup() {
     e.preventDefault();
     console.log(JSON.stringify({ name: cred.name, email: cred.email, password: cred.password, location: cred.geolocation }));
     try {
-      const response = await fetch("https://foodapp-uqfe.onrender.com/api/createuser", {
+      const response = await fetch("https://cravecraz.onrender.com/api/createuser", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

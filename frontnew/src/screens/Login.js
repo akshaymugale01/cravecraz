@@ -14,7 +14,7 @@ let navigate = useNavigate();
     e.preventDefault();
     console.log(JSON.stringify({ email: cred.email, password: cred.password}));
   
-    const response = await fetch("https://foodapp-uqfe.onrender.com/api/loginuser", {
+    const response = await fetch("https://cravecraz.onrender.com/api/loginuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
